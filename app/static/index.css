@@ -100,7 +100,7 @@ nav button:hover {
 .product-card:hover p {
     color: #635985; /* New text color on hover */
 }
-img{
+.Productmg{
     width: 100%;
 }
 .hidden {
@@ -138,4 +138,93 @@ img{
 .add-to-cart-btn:hover {
     background-color: #27374D; /* Darken button color on hover */
     color: #DDE6ED; /* Change text color on hover */
+}
+
+#shoppingCart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #DDE6ED;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+#cartItems {
+    list-style-type: none;
+    padding: 0;
+}
+
+.CartItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc; /* Add a border between cart items */
+}
+
+.CartImg {
+    width: 25%;
+    margin-right: 10px;
+}
+#shoppingCart button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #526D82;
+    color: #DDE6ED;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#shoppingCart button:hover {
+    background-color: #27374D;
+    color: #DDE6ED;
+}
+/* Additional styles for shopping cart layout */
+.CartItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.CartItemInfo {
+    display: flex;
+    align-items: center;
+}
+
+.CartItemSeparator {
+    border-left: 1px solid #ccc;
+    height: 50px; /* Adjust the height based on your preference */
+    margin: 0 20px; /* Adjust margin for separation */
+}
+
+.CartItemDetails {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Adjust margin for separation */
+}
+
+.ProductName {
+    font-weight: bold;
+}
+
+.ProductPrice {
+    color: #526D82; /* Adjust text color for price */
+}
+/* Styling for the total price display */
+.TotalPrice {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #27374D;
 }

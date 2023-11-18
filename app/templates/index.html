@@ -19,11 +19,11 @@
     <div class="product-list">
         {% for product in products %}
             <div class="product-card">
-                <img src="{{ product.image }}",>
+                <img src="{{ product.image }}", class = 'productImg'>
                 <h2 id="nombre producto">{{ product.name }}</h2>
                 <p>{{ product.desc }}</p>
                 <p>Price: ${{ product.price }}</p>
-                <button class="add-to-cart-btn", data-product="{{ product.id }}", data-action="add">Add to Cart</button>
+                <button class="add-to-cart-btn", data-pic="{{product.image}}", data-price="{{product.price}}", data-name="{{product.name}}">Add to Cart</button>
             </div>
         {% endfor %}
     </div>
@@ -31,11 +31,9 @@
     <div id="shoppingCart" class="hidden">
       <h2>Shopping Cart</h2>
       <ul id="cartItems">
-        <!-- Placeholder content -->
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <!-- Placeholder -->
       </ul>
+      <button>Checkout</button>
     </div>
 </body>
 </html>
